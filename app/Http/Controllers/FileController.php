@@ -29,4 +29,21 @@ class FileController extends Controller
       }
 
     }
+
+    public function show()
+    {
+
+      //return Storage::files('public');
+      //real time fetch all files;
+      //return Storage::allFiles('public');
+      //directory create;
+      // if (Storage::makeDirectory('public/new')) {
+      //   return 'created';
+      // }
+      //directory delete
+      // if (Storage::deleteDirectory('public/new')) {
+      //   return 'created';
+      // }
+
+    }
 }

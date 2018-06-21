@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::get('/upload','FileController@index');
 Route::post('/upload','FileController@store')->name('file.store');
+Route::get('/show','FileController@show')->name('file.show');
