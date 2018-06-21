@@ -7,9 +7,9 @@
   </head>
   <body>
     <br>
-    <div class=".col-lg-offset-4 .col-lg-4">
-      <center></center>
-      <form class="" action="#" method="post" enctype="multipart/form-data">
+    <div class="col-lg-offset-4 col-lg-4">
+      File Upload
+      <form class="" action="{{route('file.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <input type="file" name="image" value="">
         <br>
