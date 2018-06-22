@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Storage;
 use App\File;
 
+
 class FileController extends Controller
 {
     public function index()
@@ -88,5 +89,15 @@ class FileController extends Controller
           echo "string";
       }
       return redirect()->route('file.show');
+    }
+
+    public function delete($id)
+    {
+      $file=File::findOrFail($id);
+      Storage::delete('public/'.$file->name);
+        File::findOrFail($id)->delete();
+        return redirect()->route('file.show');
+      
+
     }
 }

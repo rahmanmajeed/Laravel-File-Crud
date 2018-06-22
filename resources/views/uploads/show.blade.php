@@ -10,6 +10,14 @@
   <tr>
     <td><img style="width:10%" src="/storage/{{$files->name}}" alt="img"></td>
     <td><a href="{{route('file.edit',$files->id)}}">Edit</a></td>
+    <td>
+      <form  action="{{route('file.delete',$files->id)}}" method="post" style="display:inline-block" id="form2" enctype="multipart/form-data">
+        {{csrf_field()}}
+        <input type="hidden" name="_method" value="DELETE" id="form1">
+        <input class="btn label-danger" type="submit" value="Delete">
+      </form>
+    </td>
+
     </tr>
     @endforeach
   </table>
