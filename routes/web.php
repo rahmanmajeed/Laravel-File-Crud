@@ -17,3 +17,5 @@ Route::get('/', function () {
 Route::get('/upload','FileController@index');
 Route::post('/upload','FileController@store')->name('file.store');
 Route::get('/show','FileController@show')->name('file.show');
+Route::get('/edit/{id}','FileController@edit')->name('file.edit');
+Route::match(['PUT','PATCH'],'/update/{id}','FileController@update')->name('file.update');
